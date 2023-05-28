@@ -4,6 +4,8 @@ import { Suspense } from 'react';
 import { AppBarItem } from 'components/AppBar/AppBar';
 import { LayoutWrapper } from './Layout.styled';
 
+import BackgroundImg from '../../images/background.jpeg';
+
 export const Layout = () => {
   return (
     <LayoutWrapper>

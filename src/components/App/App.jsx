@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from 'components/Layout/Layout';
 import { PrivateRoute } from 'components/PrivateRoute/PrivateRoute';
 import { RestrictedRoute } from 'components/ResrictedRoute/RestrictedRoute';
+import PageNotFound from 'components/PageNotFound/PageNotFound';
 
 const Home = lazy(() => import('../../pages/Home'));
 const Register = lazy(() => import('../../pages/Register'));
@@ -37,6 +38,7 @@ export const App = () => {
           }
         />
       </Route>
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 };

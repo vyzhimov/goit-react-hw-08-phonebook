@@ -19,7 +19,13 @@ export const AppBarItem = () => {
         color="default"
         elevation={0}
         sx={{ borderBottom: theme => `1px solid ${theme.palette.divider}` }}
-        style={{ padding: '0 30px', display: 'flex' }}
+        style={{
+          padding: '0 30px',
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
       >
         <Navigation />
         {isLoggedIn ? <UserMenu /> : <AuthNav />}

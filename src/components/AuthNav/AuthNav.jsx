@@ -1,21 +1,12 @@
-import { NavLink } from 'react-router-dom';
-import Button from '@mui/material/Button';
+import { AuthLink } from './AuthNav.styled';
 
 export const AuthNav = () => {
-  console.dir(Button);
+  console.log(AuthLink);
   return (
     <div style={{ display: 'flex' }}>
-      <NavLink to="/register">
-        <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
-          Sign Up
-        </Button>
-      </NavLink>
+      <AuthLink to="/register">Sign Up</AuthLink>
 
-      <NavLink to="/login">
-        <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
-          Log In
-        </Button>
-      </NavLink>
+      <AuthLink to="/login">Log In</AuthLink>
     </div>
   );
 };
