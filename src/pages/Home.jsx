@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <HomeContainer>
       <Blur>
-        <HomeTitle>Welcome to your personal phone book!</HomeTitle>
+        <HomeTitle>Welcome to your personal contact book!</HomeTitle>
         <HomeText>
           To use the contact book, please register or log in to your account
         </HomeText>

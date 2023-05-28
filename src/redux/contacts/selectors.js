@@ -8,9 +8,9 @@ export const selectFilteredContacts = state => {
   const contactFilter = selectContactsFilter(state);
 
   const filteredContacts = contactItems.filter(
-    ({ name, phone }) =>
+    ({ name, number }) =>
       name.toLowerCase().includes(contactFilter.toLowerCase()) ||
-      phone.includes(contactFilter)
+      number.includes(contactFilter)
   );
 
   return filteredContacts;

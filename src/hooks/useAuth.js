@@ -12,7 +12,7 @@ export const useAuth = () => {
 
   return {
     isLoggedIn,
-    isRefreshing,
     user,
+    isRefreshing,
   };
 };

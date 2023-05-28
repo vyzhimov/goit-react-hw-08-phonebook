@@ -16,3 +16,12 @@ code {
 h1 {
   margin: 0;
 }
+
+.blocks-wrapper {
+  display: block;
+  margin: 40px auto;
+}
+
+p.MuiTypography-root {
+  font-size: 20px;
+}

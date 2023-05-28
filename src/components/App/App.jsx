@@ -1,13 +1,14 @@
-import { lazy } from 'react';
-// import { useDispatch } from 'react-redux';
+import { lazy, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-// import { useAuth } from 'hooks/useAuth';
-// import { refreshUser } from 'redux/auth/authOperations';
+import { useAuth } from 'hooks/useAuth';
+import { refreshUser } from 'redux/auth/authOperations';
 
 import { Layout } from 'components/Layout/Layout';
 import { PrivateRoute } from 'components/PrivateRoute/PrivateRoute';
 import { RestrictedRoute } from 'components/ResrictedRoute/RestrictedRoute';
 import PageNotFound from 'components/PageNotFound/PageNotFound';
+import IsLoading from 'components/IsLoading/IsLoading';
 
 const Home = lazy(() => import('../../pages/Home'));
 const Register = lazy(() => import('../../pages/Register'));
@@ -15,7 +16,16 @@ const Login = lazy(() => import('../../pages/Login'));
 const PhonebookPage = lazy(() => import('../../pages/Contacts'));
 
 export const App = () => {
-  return (
+  const dispatch = useDispatch();
+  const { isRefreshing } = useAuth();
+
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
+
+  return isRefreshing ? (
+    <IsLoading />
+  ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
