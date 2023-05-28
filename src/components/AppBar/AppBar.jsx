@@ -15,7 +15,7 @@ export const AppBarItem = () => {
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
       <AppBar
-        position="static"
+        position="fixed"
         color="default"
         elevation={0}
         sx={{ borderBottom: theme => `1px solid ${theme.palette.divider}` }}

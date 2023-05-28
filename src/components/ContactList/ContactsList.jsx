@@ -76,7 +76,7 @@ export default function ContactsList() {
                     gap: '15px',
                     justifyContent: 'flex-start',
                     alignItems: 'baseline',
-                    width: '500px',
+                    width: '300px',
                   }}
                 />
                 <Button onClick={() => handleDeleteContact(id)}>Delete</Button>

@@ -25,3 +25,7 @@ h1 {
 p.MuiTypography-root {
   font-size: 20px;
 }
+
+a {
+  text-decoration: none;
+}

@@ -7,13 +7,13 @@ import Typography from '@mui/material/Typography';
 
 const PhoneBook = () => {
   return (
-    <Container component="main" maxWidth="lg">
+    <Container component="main" maxWidth="lg" style={{ overflowY: 'hidden' }}>
       <Typography
         component="h1"
         variant="h3"
         style={{
           textAlign: 'center',
-          marginTop: '30px',
+          marginTop: '90px',
           textTransform: 'uppercase',
         }}
       >
